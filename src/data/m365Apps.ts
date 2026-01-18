@@ -273,7 +273,7 @@ export const categories: Category[] = [
   {
     id: "productivity",
     name: "Productividad personal y tareas",
-    colorClass: "text-foreground",
+    colorClass: "text-white",
     bgClass: "bg-category-productivity",
     apps: [
       {
@@ -357,8 +357,8 @@ export const categories: Category[] = [
   {
     id: "security",
     name: "Identidad, seguridad y administración de dispositivos",
-    colorClass: "text-foreground",
-    bgClass: "bg-category-security",
+    colorClass: "text-gray-800",
+    bgClass: "bg-category-security border border-gray-300",
     apps: [
       {
         id: "intune",
