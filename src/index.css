@@ -38,14 +38,14 @@
 
     --radius: 0.5rem;
 
-    /* Category Colors */
-    --category-communication: 145 63% 42%;
-    --category-documents: 25 95% 53%;
-    --category-automation: 145 63% 42%;
-    --category-ai: 280 67% 55%;
-    --category-productivity: 45 93% 47%;
-    --category-analytics: 199 89% 48%;
-    --category-security: 45 93% 47%;
+    /* Category Colors - Matching reference image */
+    --category-communication: 120 50% 55%;
+    --category-documents: 20 85% 50%;
+    --category-automation: 120 50% 55%;
+    --category-ai: 45 100% 60%;
+    --category-productivity: 35 100% 55%;
+    --category-analytics: 195 100% 45%;
+    --category-security: 0 0% 96%;
 
     /* Shadows */
     --shadow-card: 0 2px 8px -2px hsl(220 13% 18% / 0.08), 0 4px 16px -4px hsl(220 13% 18% / 0.12);
