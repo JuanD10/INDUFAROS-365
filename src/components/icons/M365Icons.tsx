@@ -4,176 +4,210 @@ interface IconProps {
   className?: string;
 }
 
+// Teams - Purple T with people icon
 export const TeamsIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M40 16H28V8H36C38.2091 8 40 9.79086 40 12V16Z" fill="#5059C9"/>
-    <path d="M28 16H8C8 13.7909 9.79086 12 12 12H28V16Z" fill="#7B83EB"/>
-    <path d="M28 16V36C28 38.2091 26.2091 40 24 40H12C9.79086 40 8 38.2091 8 36V16H28Z" fill="#7B83EB"/>
-    <circle cx="36" cy="10" r="4" fill="#5059C9"/>
-    <circle cx="18" cy="22" r="4" fill="white"/>
-    <path d="M14 30H22V34H14V30Z" fill="white"/>
-    <path d="M40 20V32C40 34.2091 38.2091 36 36 36H28V16H36C38.2091 16 40 17.7909 40 20Z" fill="#5059C9"/>
+    <path d="M31.8 18.6h8.7c.8 0 1.5.7 1.5 1.5v9.3c0 3.1-2.5 5.6-5.6 5.6h-.9c-.2 0-.4-.2-.4-.4v-12c0-2.2-1.3-4-3.3-4z" fill="#5059C9"/>
+    <circle cx="36" cy="13" r="3.5" fill="#5059C9"/>
+    <path d="M28 17H12c-1.7 0-3 1.3-3 3v10c0 4.4 3.6 8 8 8h4c4.4 0 8-3.6 8-8V18c0-.6-.4-1-1-1z" fill="#7B83EB"/>
+    <circle cx="20" cy="11" r="5" fill="#7B83EB"/>
+    <rect x="16" y="23" width="8" height="2" rx="1" fill="white"/>
+    <rect x="16" y="27" width="8" height="2" rx="1" fill="white"/>
   </svg>
 );
 
+// Viva Engage - Blue square with Y
 export const VivaEngageIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="8" width="32" height="32" rx="4" fill="#106EBE"/>
-    <text x="24" y="32" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">Y</text>
+    <rect x="4" y="4" width="40" height="40" rx="4" fill="#106EBE"/>
+    <path d="M14 14L24 26V34M24 26L34 14" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
+// Outlook - Blue O with envelope
 export const OutlookIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M44 12V36C44 38.2091 42.2091 40 40 40H20V8H40C42.2091 8 44 9.79086 44 12Z" fill="#0A64A4"/>
-    <path d="M4 14C4 10.6863 6.68629 8 10 8H24V40H10C6.68629 40 4 37.3137 4 34V14Z" fill="#0078D4"/>
-    <ellipse cx="14" cy="24" rx="6" ry="8" fill="white"/>
+    <path d="M45 12v24c0 2.2-1.8 4-4 4H19V8h22c2.2 0 4 1.8 4 4z" fill="#0A64A4"/>
+    <path d="M45 12l-13 10-13-10" stroke="#28A8EA" strokeWidth="2"/>
+    <path d="M3 12c0-2.2 1.8-4 4-4h12v32H7c-2.2 0-4-1.8-4-4V12z" fill="#0078D4"/>
+    <ellipse cx="13" cy="24" rx="6" ry="8" stroke="white" strokeWidth="3" fill="none"/>
   </svg>
 );
 
+// Calendar - Blue calendar with grid
 export const CalendarIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="6" y="10" width="36" height="32" rx="2" fill="#0078D4"/>
-    <rect x="6" y="10" width="36" height="8" fill="#0A64A4"/>
-    <rect x="14" y="6" width="4" height="8" rx="1" fill="#1490DF"/>
-    <rect x="30" y="6" width="4" height="8" rx="1" fill="#1490DF"/>
-    <rect x="12" y="24" width="6" height="6" fill="white"/>
-    <rect x="21" y="24" width="6" height="6" fill="white"/>
-    <rect x="30" y="24" width="6" height="6" fill="white"/>
-    <rect x="12" y="32" width="6" height="6" fill="white"/>
-    <rect x="21" y="32" width="6" height="6" fill="white"/>
+    <rect x="6" y="10" width="36" height="32" rx="2" fill="white" stroke="#0078D4" strokeWidth="2"/>
+    <rect x="6" y="10" width="36" height="10" fill="#0078D4"/>
+    <rect x="12" y="6" width="4" height="8" rx="1" fill="#0078D4"/>
+    <rect x="32" y="6" width="4" height="8" rx="1" fill="#0078D4"/>
+    <text x="24" y="34" textAnchor="middle" fill="#0078D4" fontSize="14" fontWeight="bold">O</text>
+    <rect x="36" y="11" width="4" height="4" fill="white"/>
+    <rect x="36" y="16" width="4" height="2" fill="#0A64A4"/>
   </svg>
 );
 
+// Loop - Purple swirl/infinity
 export const LoopIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44" stroke="#0078D4" strokeWidth="4" strokeLinecap="round"/>
-    <path d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4" stroke="#41A5EE" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="24" cy="24" r="8" fill="#9B4DCA"/>
+    <path d="M38 16c-5-8-16-8-20 0s-4 16 4 20c8 4 16-2 16-10" stroke="#9B4DCA" strokeWidth="5" strokeLinecap="round" fill="none"/>
+    <path d="M10 32c5 8 16 8 20 0s4-16-4-20c-8-4-16 2-16 10" stroke="#C77DFF" strokeWidth="5" strokeLinecap="round" fill="none"/>
   </svg>
 );
 
+// SharePoint - Teal circles with S
 export const SharePointIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="20" cy="20" r="14" fill="#036C70"/>
-    <circle cx="32" cy="24" r="10" fill="#1A9BA1"/>
-    <circle cx="26" cy="34" r="8" fill="#37C6D0"/>
-    <text x="20" y="25" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">S</text>
+    <circle cx="18" cy="18" r="14" fill="#036C70"/>
+    <circle cx="32" cy="24" r="11" fill="#1A9BA1"/>
+    <circle cx="24" cy="36" r="8" fill="#37C6D0"/>
+    <text x="18" y="24" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">S</text>
   </svg>
 );
 
+// OneDrive - Blue clouds
 export const OneDriveIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M20 18C20 14.6863 22.6863 12 26 12C28.7614 12 31.0736 13.8348 31.7656 16.3359C32.4921 15.4961 33.5564 14.9688 34.75 14.9688C36.8211 14.9688 38.5 16.6477 38.5 18.7188C38.5 18.9219 38.4844 19.1211 38.4551 19.3164C41.0879 19.7852 43 22.1094 43 24.875C43 28.0508 40.4844 30.625 37.375 30.625H14.125C10.4609 30.625 7.5 27.6641 7.5 24C7.5 20.7891 9.79688 18.125 12.8281 17.5625C13.2773 14.2539 16.1445 11.6875 19.625 11.6875C20.6367 11.6875 21.5938 11.9297 22.4414 12.3594" fill="#0364B8"/>
-    <path d="M20 18C20 14.6863 22.6863 12 26 12C28.7614 12 31.0736 13.8348 31.7656 16.3359C34.9609 16.5234 37.5 19.1641 37.5 22.4063C37.5 25.8086 34.7461 28.5625 31.3438 28.5625H14.6563C11.5313 28.5625 9 26.0313 9 22.9063C9 20.0391 11.1406 17.6836 13.9063 17.3281C14.3516 14.3984 16.8945 12.125 20 12.125" fill="#0078D4"/>
-    <path d="M29.5 22C29.5 18.6863 32.1863 16 35.5 16C38.5376 16 41.0469 18.2695 41.4375 21.1875C43.4844 21.6094 45 23.4531 45 25.625C45 28.1094 42.9844 30.125 40.5 30.125H22.75C19.8516 30.125 17.5 27.7734 17.5 24.875C17.5 22.2422 19.4531 20.0625 22 19.6406" fill="#1490DF"/>
+    <path d="M17.5 34h-4.25C8.8 34 5 30.2 5 25.75c0-3.9 2.78-7.15 6.47-7.9.52-4.08 4.02-7.25 8.28-7.25 1.92 0 3.7.65 5.12 1.74" fill="#0364B8"/>
+    <path d="M14.75 34c-3.45 0-6.25-2.8-6.25-6.25 0-3.13 2.3-5.72 5.3-6.17.42-3.45 3.35-6.13 6.95-6.13 2.8 0 5.22 1.63 6.37 3.99" fill="#0078D4"/>
+    <path d="M26.25 18.5c.25-.03.5-.05.75-.05 4.56 0 8.25 3.69 8.25 8.25 0 .44-.04.87-.11 1.3h2.36c2.9 0 5.25 2.35 5.25 5.25S40.4 38.5 37.5 38.5H22.25c-3.45 0-6.25-2.8-6.25-6.25 0-3.33 2.6-6.05 5.88-6.23" fill="#1490DF"/>
+    <path d="M27 18.45c3.87.23 6.97 3.37 7.15 7.26.02.35.03.7.01 1.04h3.34c2.49 0 4.5 2.01 4.5 4.5s-2.01 4.5-4.5 4.5H20.75c-3.04 0-5.5-2.46-5.5-5.5 0-2.93 2.29-5.32 5.18-5.49" fill="#28A8EA"/>
   </svg>
 );
 
+// OneNote - Purple N
 export const OneNoteIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 8H32V40H8V8Z" fill="#7719AA"/>
-    <path d="M32 8H40V40H32V8Z" fill="#9332BF"/>
-    <path d="M12 16H18L22 28L18 28V32H12V16Z" fill="white"/>
-    <text x="15" y="28" fill="white" fontSize="14" fontWeight="bold">N</text>
+    <path d="M28 8v32H8c-2.2 0-4-1.8-4-4V12c0-2.2 1.8-4 4-4h20z" fill="#7719AA"/>
+    <path d="M28 8h12c2.2 0 4 1.8 4 4v24c0 2.2-1.8 4-4 4H28V8z" fill="#9332BF"/>
+    <rect x="32" y="12" width="8" height="2" fill="white" opacity="0.5"/>
+    <rect x="32" y="18" width="8" height="2" fill="white" opacity="0.5"/>
+    <rect x="32" y="24" width="8" height="2" fill="white" opacity="0.5"/>
+    <rect x="6" y="8" width="22" height="32" fill="#7719AA"/>
+    <text x="17" y="30" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">N</text>
   </svg>
 );
 
+// Stream - Red/Pink play arrow
 export const StreamIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6 12L42 24L6 36V12Z" fill="#BC1948"/>
-    <path d="M18 18L42 24L18 30V18Z" fill="#E33D6F"/>
+    <path d="M8 10v28l32-14L8 10z" fill="#BC1948"/>
+    <path d="M20 16v16l16-8-16-8z" fill="#E33D6F"/>
   </svg>
 );
 
+// Power Automate - Blue flow arrows
 export const PowerAutomateIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 16L24 8L40 16V32L24 40L8 32V16Z" fill="#0066FF"/>
-    <path d="M24 8L40 16V32L24 24V8Z" fill="#00A4EF"/>
-    <path d="M16 20L24 16L32 20L24 24L16 20Z" fill="white"/>
-    <path d="M24 24V36L16 32V20L24 24Z" fill="#0066FF"/>
+    <path d="M6 12l18-8 18 8v24l-18 8-6-2.67" fill="#0066FF"/>
+    <path d="M24 4l18 8v24l-18 8V4z" fill="#00A4EF"/>
+    <path d="M16 18l8-4 8 4-8 4-8-4z" fill="white"/>
+    <path d="M16 18v8l8 4v-8l-8-4z" fill="#0052CC"/>
+    <path d="M32 18v8l-8 4v-8l8-4z" fill="white" fillOpacity="0.6"/>
   </svg>
 );
 
+// Power Apps - Purple hexagon with circles
 export const PowerAppsIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8 16L24 8L40 16V32L24 40L8 32V16Z" fill="#742774"/>
-    <path d="M24 8L40 16V32L24 24V8Z" fill="#AE4AE8"/>
-    <circle cx="24" cy="24" r="6" fill="white"/>
+    <path d="M6 12l18-8 18 8v24l-18 8-18-8V12z" fill="#742774"/>
+    <path d="M24 4l18 8v24l-18 8V4z" fill="#AE4AE8"/>
+    <circle cx="18" cy="20" r="5" fill="white"/>
+    <circle cx="30" cy="20" r="5" fill="white" fillOpacity="0.7"/>
+    <circle cx="24" cy="30" r="5" fill="white" fillOpacity="0.5"/>
   </svg>
 );
 
+// Forms - Green rectangle with F
 export const FormsIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="6" width="32" height="36" rx="2" fill="#077568"/>
-    <rect x="14" y="14" width="20" height="4" fill="white"/>
-    <rect x="14" y="22" width="20" height="4" fill="white"/>
-    <rect x="14" y="30" width="12" height="4" fill="white"/>
+    <rect x="8" y="4" width="32" height="40" rx="2" fill="#077568"/>
+    <rect x="14" y="12" width="20" height="3" rx="1" fill="white"/>
+    <rect x="14" y="20" width="14" height="3" rx="1" fill="white"/>
+    <rect x="14" y="28" width="18" height="3" rx="1" fill="white"/>
+    <text x="24" y="32" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold" opacity="0">F</text>
   </svg>
 );
 
+// Copilot - Colorful gradient swirl
 export const CopilotIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <linearGradient id="copilotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#6264A7"/>
-        <stop offset="33%" stopColor="#A06EAA"/>
-        <stop offset="66%" stopColor="#E0A85A"/>
-        <stop offset="100%" stopColor="#56A5EC"/>
+      <linearGradient id="copilotGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#56A5EC"/>
+        <stop offset="50%" stopColor="#9B59D0"/>
+        <stop offset="100%" stopColor="#E67E22"/>
+      </linearGradient>
+      <linearGradient id="copilotGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#27AE60"/>
+        <stop offset="50%" stopColor="#56A5EC"/>
+        <stop offset="100%" stopColor="#9B59D0"/>
       </linearGradient>
     </defs>
-    <circle cx="24" cy="24" r="18" fill="url(#copilotGrad)"/>
-    <path d="M16 20C16 18 18 16 20 16H28C30 16 32 18 32 20V28C32 30 30 32 28 32H20C18 32 16 30 16 28V20Z" fill="white" fillOpacity="0.9"/>
-    <path d="M20 22H28M20 26H26" stroke="url(#copilotGrad)" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M24 8c-8.84 0-16 7.16-16 16s7.16 16 16 16c4.42 0 8.42-1.79 11.31-4.69" stroke="url(#copilotGrad1)" strokeWidth="5" strokeLinecap="round" fill="none"/>
+    <path d="M24 40c8.84 0 16-7.16 16-16S32.84 8 24 8c-4.42 0-8.42 1.79-11.31 4.69" stroke="url(#copilotGrad2)" strokeWidth="5" strokeLinecap="round" fill="none"/>
+    <circle cx="24" cy="24" r="6" fill="url(#copilotGrad1)"/>
   </svg>
 );
 
+// To Do - Blue checkmark
 export const TodoIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="8" width="32" height="32" rx="4" fill="#3B82F6"/>
-    <path d="M16 24L22 30L34 18" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M8 24c0-8.84 7.16-16 16-16s16 7.16 16 16" stroke="#3B82F6" strokeWidth="4" strokeLinecap="round" fill="none"/>
+    <path d="M12 28l8 8 16-18" stroke="#3B82F6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
   </svg>
 );
 
+// Planner - Green bars chart
 export const PlannerIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="6" y="10" width="10" height="28" rx="2" fill="#31752F"/>
-    <rect x="19" y="10" width="10" height="20" rx="2" fill="#3F8F3C"/>
-    <rect x="32" y="10" width="10" height="12" rx="2" fill="#5DB75D"/>
+    <rect x="6" y="12" width="10" height="28" rx="2" fill="#185A30"/>
+    <rect x="19" y="8" width="10" height="32" rx="2" fill="#31752F"/>
+    <rect x="32" y="18" width="10" height="22" rx="2" fill="#54B054"/>
   </svg>
 );
 
+// Ofimática (Office) - Orange/Red diamond
 export const OfficeIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M28 4L4 10V38L28 44V4Z" fill="#D35230"/>
-    <path d="M28 4L44 8V40L28 44V4Z" fill="#FF6C40"/>
-    <path d="M16 18L22 16V32L16 30V18Z" fill="white"/>
+    <path d="M26 4L4 12v24l22 8V4z" fill="#D35230"/>
+    <path d="M26 4l18 6v28l-18 6V4z" fill="#FF6C40"/>
+    <ellipse cx="18" cy="24" rx="6" ry="10" stroke="white" strokeWidth="2" fill="none"/>
   </svg>
 );
 
+// Power BI - Yellow bars
 export const PowerBIIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="24" width="8" height="16" rx="1" fill="#F2C811"/>
-    <rect x="20" y="16" width="8" height="24" rx="1" fill="#F2C811"/>
-    <rect x="32" y="8" width="8" height="32" rx="1" fill="#F2C811"/>
+    <rect x="6" y="6" width="36" height="36" rx="4" fill="#F2C811"/>
+    <rect x="12" y="26" width="6" height="12" rx="1" fill="white"/>
+    <rect x="21" y="18" width="6" height="20" rx="1" fill="white"/>
+    <rect x="30" y="10" width="6" height="28" rx="1" fill="white"/>
   </svg>
 );
 
+// Intune - Device with check
 export const IntuneIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="6" width="24" height="36" rx="2" fill="#0078D4"/>
-    <rect x="14" y="10" width="20" height="24" fill="white"/>
-    <circle cx="24" cy="38" r="2" fill="white"/>
-    <path d="M20 18L24 22L32 14" stroke="#0078D4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <rect x="10" y="4" width="18" height="30" rx="2" fill="#666" stroke="#444" strokeWidth="1"/>
+    <rect x="12" y="8" width="14" height="20" fill="white"/>
+    <circle cx="19" cy="31" r="1.5" fill="white"/>
+    <rect x="24" y="20" width="16" height="20" rx="2" fill="#0078D4"/>
+    <rect x="26" y="24" width="12" height="12" fill="white"/>
+    <path d="M30 30l2 2 4-4" stroke="#0078D4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
+// Azure AD - Blue hexagon with person
 export const AzureADIcon: React.FC<IconProps> = ({ className }) => (
   <svg className={className} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M24 4L44 14V34L24 44L4 34V14L24 4Z" fill="#0078D4"/>
-    <path d="M24 14L36 20V32L24 38L12 32V20L24 14Z" fill="white"/>
-    <circle cx="24" cy="22" r="4" fill="#0078D4"/>
-    <path d="M16 32C16 28 20 26 24 26C28 26 32 28 32 32" stroke="#0078D4" strokeWidth="2"/>
+    <circle cx="24" cy="24" r="18" fill="none" stroke="#0078D4" strokeWidth="2"/>
+    <circle cx="24" cy="8" r="3" fill="#0078D4"/>
+    <circle cx="10" cy="32" r="3" fill="#0078D4"/>
+    <circle cx="38" cy="32" r="3" fill="#0078D4"/>
+    <path d="M24 8v8M10 32l10-8M38 32l-10-8" stroke="#0078D4" strokeWidth="2"/>
+    <circle cx="24" cy="20" r="4" fill="#0078D4"/>
+    <path d="M16 34c0-4 4-6 8-6s8 2 8 6" stroke="#0078D4" strokeWidth="2" strokeLinecap="round"/>
   </svg>
 );
 
