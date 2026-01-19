@@ -153,6 +153,52 @@ const AppDetail: React.FC = () => {
                 </div>
               </div>
             </section>
+
+            {/* Videos Section */}
+            {app.videos && app.videos.length > 0 && (
+              <section
+                className="bg-card rounded-2xl p-8 border border-border/50 card-shadow opacity-0 animate-fade-in"
+                style={{ animationDelay: '350ms' }}
+              >
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="p-2.5 rounded-xl bg-primary/10 text-primary">
+                    <ExternalLink className="w-6 h-6" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-foreground tracking-tight">Recursos en Video</h2>
+                </div>
+                <div className={`grid gap-6 ${app.videos.length > 1 ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
+                  {app.videos.map((url, index) => {
+                    const getEmbedUrl = (url: string) => {
+                      if (url.includes('embed/')) return url;
+                      let videoId = '';
+                      if (url.includes('v=')) {
+                        videoId = url.split('v=')[1]?.split('&')[0];
+                      } else if (url.includes('youtu.be/')) {
+                        videoId = url.split('youtu.be/')[1]?.split('?')[0];
+                      } else {
+                        videoId = url.split('/').pop()?.split('?')[0] || '';
+                      }
+                      return `https://www.youtube-nocookie.com/embed/${videoId}`;
+                    };
+                    const embedUrl = getEmbedUrl(url);
+
+                    return (
+                      <div key={index} className="aspect-video rounded-2xl overflow-hidden border border-border bg-black shadow-sm">
+                        <iframe
+                          className="w-full h-full"
+                          src={embedUrl}
+                          title={`${app.name} Video ${index + 1}`}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
           </div>
 
           {/* Right Column: Best Practices, Errors & Impact */}

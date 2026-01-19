@@ -14,6 +14,7 @@ export interface M365App {
   };
   commonErrors: string[];
   impact: string;
+  videos?: string[];
 }
 
 export interface Category {
@@ -81,6 +82,11 @@ export const categories: Category[] = [
         features: ["Chat instantáneo", "Videoconferencias", "Canales operativos", "Integración M365"],
         useCases: ["Coordinación diaria", "Reuniones rápidas", "Difusión operativa"],
         usage: "Difusión y respuestas rápidas (Reemplazo de WhatsApp)",
+        videos: [
+          "https://www.youtube.com/embed/WpBAfLWDvUY",
+          "https://www.youtube.com/embed/C2wLCd8FcxQ",
+          "https://www.youtube.com/embed/28JzrfFj6cU"
+        ],
         rules: [
           "Mensajes ágiles y coordinación operativa del día a día.",
           "Escribe las solicitudes en el chat directo del lider de proceso.",
@@ -129,7 +135,7 @@ export const categories: Category[] = [
           "Evitar el uso de este canal para solicitudes operativas o administrativas (usar Outlook o Teams según corresponda)."
         ],
         bestPractices: [
-          "Publica contenido relevante y alineado con los objetivos de la empresa y tu área.",
+          "Publica contenido relevante and alineado con los objetivos de la empresa y tu área.",
           "Usa un lenguaje positivo y constructivo que fomente la participación.",
           "Responde y comenta con respeto, promoviendo el diálogo abierto y profesional.",
           "Comparte logros, reconocimientos y actividades de tu equipo para fortalecer la cultura organizacional.",
@@ -160,6 +166,9 @@ export const categories: Category[] = [
         features: ["Programación asistida", "Recordatorios", "Disponibilidad compartida", "Eventos recurrentes"],
         useCases: ["Planificación de reuniones", "Gestión de disponibilidad", "Organización personal"],
         usage: "Planificación, coordinación y gestión de reuniones, citas, eventos y recordatorios laborales, facilitando la organización del tiempo, la productividad y la colaboración entre equipos.",
+        videos: [
+          "https://www.youtube.com/embed/OhsiRDkXVIo"
+        ],
         rules: [
           "Utiliza el calendario como canal oficial para programar reuniones y eventos laborales.",
           "Toda reunión debe contar con un objetivo claro y una agenda definida.",
@@ -250,6 +259,9 @@ export const categories: Category[] = [
         features: ["Bibliotecas oficiales", "Control de versiones", "Intranet", "Permisos granulares"],
         useCases: ["Documentación oficial", "Políticas y procesos", "Gestión de permisos"],
         usage: "Centralizar y estructurar la información institucional (formatos, procesos, documentos clave).",
+        videos: [
+          "https://www.youtube.com/embed/cd7fDGZanmo"
+        ],
         rules: [
           "Publicación de políticas, procedimientos, formatos y demás documentación oficial.",
           "La creación de sitios será gestionada exclusivamente por el área de sistemas.",
@@ -265,7 +277,7 @@ export const categories: Category[] = [
           "Mantener una comunicación clara: Si notas información desactualizada o errores en documentos, informa a los responsables de manera clara y específica a través del correo electrónico o teams."
         ],
         examples: {
-          adequate: "Un líder de proceso publica en el sitio de su área la versión oficial y aprobada de un procedimiento, asegurándose de que el nombre del archivo, la fecha y el control de versión estén correctamente identificados. Los colaboradores consultan el documento directamente en SharePoint, sin descargar copias locales innecesarias, y utilizan las opciones de comentarios o los canales definidos (correo o Teams) para reportar observaciones. El área de sistemas gestiona los permisos, garantizando que solo los usuarios autorizados puedan editar o administrar la información.",
+          adequate: "Un líder de proceso publica en el sitio de su área la versión oficial y aprobada de un procedimiento, asegurándose de que el nombre del archivo, la fecha y el control de versión estén correctamente identificados. Los colaboradores consultan el documento directamente en SharePoint, sin descargar copias locales necesarias, y utilizan las opciones de comentarios o los canales definidos (correo o Teams) para reportar observaciones. El área de sistemas gestiona los permisos, garantizando que solo los usuarios autorizados puedan editar o administrar la información.",
           inadequate: "Un colaborador crea carpetas o sitios sin autorización, guarda documentos locales como referencia oficial, descarga archivos para modificarlos y luego los comparte por correo o WhatsApp, o sube versiones desactualizadas sin control de cambios. Asimismo, modificar o eliminar documentos sin autorización, ignorar la estructura definida del sitio o compartir enlaces con personas no autorizadas representa un uso incorrecto de la plataforma."
         },
         commonErrors: [
@@ -291,113 +303,107 @@ export const categories: Category[] = [
           "Los documentos finales, aprobados u oficiales deben almacenarse en SharePoint.",
           "Está prohibido usar OneDrive como fuente oficial para compartir documentación institucional.",
           "Comparte archivos únicamente con las personas necesarias y por el tiempo requerido.",
-          "No otorgues permisos de edición o acceso externo sin la debida autorización.",
-          "El usuario es responsable de la información almacenada y compartida en su OneDrive.",
-          "Evita almacenar información sensible o crítica de forma permanente en OneDrive."
+          "Cada colaborador es responsable de la organización y seguridad de su OneDrive.",
+          "Elimina periódicamente archivos temporales que ya no sean necesarios.",
+          "No compartas enlaces de OneDrive con personas externas a la organización sin autorización.",
+          "Evita subir archivos personales no relacionados con el trabajo.",
+          "Al retirarse de la empresa, el colaborador debe entregar la información relevante al líder de área."
         ],
         bestPractices: [
-          "Organiza tus archivos en carpetas claras y con nombres descriptivos.",
-          "Utiliza enlaces compartidos con fecha de caducidad cuando sea posible.",
-          "Revisa y limpia periódicamente archivos que ya no sean necesarios.",
-          "Usa OneDrive para colaboración temporal antes de mover la versión final a SharePoint.",
-          "Verifica los permisos de los archivos compartidos antes de enviar el enlace.",
-          "Sincroniza solo las carpetas necesarias en dispositivos personales o corporativos.",
-          "Asegúrate de que los archivos compartidos correspondan a versiones actualizadas."
+          "Organiza tus archivos en carpetas con nombres claros y descriptivos.",
+          "Usa la sincronización de archivos para trabajar sin conexión y mantener todo actualizado automáticamente.",
+          "Revisa con quién estás compartiendo archivos y carpetas periódicamente.",
+          "Utiliza el historial de versiones para recuperar estados anteriores de un documento.",
+          "Asegúrate de que tus archivos importantes tengan una copia de seguridad o estén sincronizados correctamente.",
+          "No compartas carpetas completas si solo necesitas compartir un archivo específico.",
+          "Usa la opción de 'Solicitar archivos' cuando necesites que otros carguen documentos en tu OneDrive sin ver el contenido.",
+          "Configura contraseñas y fechas de expiración al compartir archivos sensibles.",
+          "No utilices caracteres especiales o rutas demasiado largas en los nombres de archivos.",
+          "Capacítate en las herramientas de colaboración en tiempo real integradas en OneDrive."
         ],
         examples: {
-          adequate: "Un colaborador trabaja en el borrador de un informe en su OneDrive y lo comparte temporalmente con su equipo para recibir comentarios. Una vez el documento es revisado y aprobado, se carga la versión final en el sitio de SharePoint del área, eliminando el acceso compartido en OneDrive para evitar confusión sobre la versión oficial.",
-          inadequate: "Guardar documentos oficiales, políticas o formatos aprobados únicamente en OneDrive y compartirlos como referencia institucional. También es un mal uso conservar información sensible sin controles adecuados o mantener archivos compartidos de forma indefinida sin revisión de permisos."
+          adequate: "Un colaborador está trabajando en una propuesta de proyecto que aún no está terminada. Guarda el borrador en su OneDrive personal de trabajo, lo comparte con un compañero de equipo para recibir comentarios en tiempo real y, una vez que la propuesta es aprobada y finalizada, carga la versión oficial en el sitio de SharePoint correspondiente del área.",
+          inadequate: "Utilizar OneDrive como el único lugar para guardar documentos oficiales del área, no compartir los avances con los responsables, dejar archivos sensibles con acceso público o no trasladar la información a SharePoint una vez culminado el proceso."
         },
         commonErrors: [
-          "Usar OneDrive como repositorio oficial de la empresa.",
-          "Compartir enlaces sin controlar permisos o vigencia.",
-          "Conservar versiones finales y borradores mezcladas.",
-          "Compartir información sensible sin autorización.",
-          "No retirar accesos cuando el archivo deja de ser necesario."
+          "Confundir OneDrive con un repositorio institucional permanente.",
+          "No compartir archivos con los responsables de área.",
+          "Mantener enlaces compartidos activos indefinidamente.",
+          "Sincronizar carpetas personales en equipos corporativos.",
+          "Ignorar el límite de almacenamiento."
         ],
-        impact: "El uso incorrecto de OneDrive puede generar pérdida de control documental, riesgos de seguridad, uso de versiones no oficiales y dependencia de archivos personales. Esto afecta la trazabilidad de la información y la continuidad operativa. Usado correctamente, OneDrive facilita la productividad individual y la colaboración controlada, complementando de manera adecuada a SharePoint y Teams."
+        impact: "El mal uso de OneDrive puede provocar que información crítica quede aislada en cuentas personales, dificultando el acceso al equipo y generando riesgos de pérdida de datos si el colaborador se retira. Un uso adecuado garantiza agilidad en el trabajo individual y una transición fluida hacia la documentación oficial en SharePoint."
       },
       {
         id: "onenote",
         name: "OneNote",
         category: "documents",
-        description: "Cuaderno digital para minutas de reuniones y organización personal de apuntes.",
-        features: ["Notas estructuradas", "Multidispositivo", "Búsqueda avanzada"],
-        useCases: ["Minutas de reunión", "Seguimiento personal", "Registro de ideas"],
-        usage: "Organización de notas de trabajo, registro de ideas, reuniones, apuntes operativos y documentación personal o de equipo, facilitando la consulta rápida de información y el seguimiento de actividades.",
+        description: "Bloc de notas digital para organizar ideas, actas y documentación de referencia.",
+        features: ["Blocs por secciones", "Búsqueda avanzada", "Soporte multimedia", "Dibujo/Anotaciones"],
+        useCases: ["Actas de reunión", "Repositorio de conocimientos", "Manuales rápidos"],
+        usage: "Cuaderno digital para capturar y organizar información.",
         rules: [
-          "Utiliza OneNote para notas de trabajo, minutas de reuniones y seguimiento personal o de equipo.",
-          "OneNote no es un repositorio oficial de documentación institucional.",
-          "Las notas estratégicas o formales deben trasladarse a los repositorios oficiales (SharePoint, Planner, etc.).",
-          "Cada usuario es responsable del contenido almacenado en sus libretas.",
-          "Evita almacenar información confidencial o sensible sin autorización.",
-          "Las libretas compartidas deben tener un propósito claro.",
-          "No dupliques información que ya esté documentada oficialmente.",
-          "Mantén las libretas organizadas por secciones y páginas.",
-          "El acceso a libretas compartidas debe limitarse a los involucrados.",
-          "OneNote complementa, pero no reemplaza, los procesos formales."
+          "Crea blocs compartidos para proyectos de área.",
+          "No guardes información confidencial sin contraseña.",
+          "Mantén una estructura jerárquica clara.",
+          "Revisión periódica de contenido obsoleto.",
+          "Usa para documentación dinámica y notas rápidas."
         ],
         bestPractices: [
-          "Organiza las libretas por proyectos, áreas o temas.",
-          "Usa títulos claros y fechas en las páginas.",
-          "Registra acuerdos y responsables en notas de reunión.",
-          "Sincroniza regularmente las libretas para evitar pérdida de información.",
-          "Utiliza etiquetas para resaltar tareas o puntos clave.",
-          "Revisa y limpia notas antiguas que ya no sean necesarias.",
-          "Comparte libretas solo cuando sea necesario."
+          "Usa etiquetas (Pendiente, Importante).",
+          "Sincroniza en todos tus dispositivos.",
+          "Inserta capturas de Outlook o documentos.",
+          "Usa plantillas para actas de reuniones.",
+          "Realiza búsquedas de texto en imágenes."
         ],
         examples: {
-          adequate: "Un colaborador registra en OneNote la minuta de una reunión, anotando acuerdos, responsables y fechas. Luego, las tareas definidas se trasladan a Planner y los documentos oficiales se almacenan en SharePoint. OneNote queda como soporte de consulta rápida y registro histórico personal o de equipo.",
-          inadequate: "Usar OneNote como repositorio oficial de procedimientos, guardar información sensible con controles o depender exclusivamente de notas personales para procesos críticos. También es un mal uso compartir libretas sin control de acceso."
+          adequate: "Bloc de notas del equipo de Marketing con ideas para campañas y actas semanales.",
+          inadequate: "Un solo bloc gigante sin secciones ni orden."
         },
         commonErrors: [
-          "Usar OneNote como archivo oficial de la empresa.",
-          "Guardar información sensible sin autorización.",
-          "Mantener libretas desordenadas o sin estructura.",
-          "No trasladar acuerdos a herramientas formales.",
-          "Compartir libretas con usuarios no involucrados."
+          "Pérdida de sincronización por archivos muy pesados.",
+          "Nombres genéricos de páginas (Página sin título).",
+          "Demasiadas secciones vacías.",
+          "No compartir el bloc con los interesados.",
+          "Información desordenada."
         ],
-        impact: "El uso incorrecto de OneNote puede generar desorden de información, pérdida de acuerdos formales y riesgos de seguridad. Utilizado correctamente, OneNote mejora la organización personal, facilita el seguimiento de ideas y reuniones, y complementa eficazmente las herramientas oficiales de gestión y comunicación."
+        impact: "Dificultad para encontrar información y pérdida de memoria institucional."
       },
       {
         id: "stream",
         name: "Stream",
         category: "documents",
-        description: "Gestión y visualización de video corporativo, capacitaciones y comunicados.",
-        features: ["Streaming seguro", "Capítulos", "Transcripciones", "Integración Teams"],
-        useCases: ["Capacitación", "Comunicados gerencia", "Tutoriales"],
-        usage: "Microsoft Stream se utiliza como la plataforma corporativa para la gestión, publicación y visualización de contenidos de video institucionales, como capacitaciones, comunicados, reuniones grabadas, tutoriales y piezas audiovisuales internas, integradas con SharePoint, Teams y Microsoft 365.",
+        description: "Plataforma institucional de video para formación, grabaciones y comunicación interna.",
+        features: ["Grabación de pantalla", "Transcripciones automáticas", "Capítulos de video", "Integración SharePoint"],
+        useCases: ["Grabaciones de reuniones", "Video-tutoriales", "Mensajes ejecutivos"],
+        usage: "Gestión y visualización de videos corporativos.",
         rules: [
-          "Stream is el canal oficial para el almacenamiento y distribución de videos corporativos.",
-          "Los videos deben estar asociados a un área, proceso o propósito organizacional claro.",
-          "Las grabaciones deben almacenarse en el sitio de SharePoint del área correspondiente.",
-          "El acceso a los videos se gestiona mediante los permisos definidos por el área de sistemas.",
-          "Está prohibido publicar contenido que incumpla las políticas de ética, confidencialidad y seguridad de la información.",
-          "Los videos deben tener títulos, descripciones y fechas claras.",
-          "No se permite el uso de Stream para contenido personal, recreativo o ajeno a la actividad laboral."
+          "Sube videos únicamente de carácter laboral.",
+          "Usa transcripciones para mejorar accesibilidad.",
+          "Nombra y describe los videos claramente.",
+          "Gestiona los permisos de visualización.",
+          "Elimina grabaciones de reuniones que ya no sean útiles."
         ],
         bestPractices: [
-          "Nombrar los videos de forma clara y estandarizada.",
-          "Añadir descripciones que indiquen objetivo, audiencia y fecha.",
-          "Usar capítulos y marcas de tiempo para mejorar la experiencia del usuario.",
-          "Subir los videos en la ubicación correcta del sitio de SharePoint.",
-          "Eliminar o archivar contenidos obsoletos.",
-          "Usar Stream para capacitaciones y material reutilizable.",
-          "Validar que los permisos de acceso sean los correctos antes de compartir."
+          "Usa capítulos para videos largos.",
+          "Añade encuestas de Forms dentro del video.",
+          "Graba mensajes cortos de actualización.",
+          "Organiza videos en listas de reproducción por tema.",
+          "Inserta videos en páginas de SharePoint o Viva Engage."
         ],
         examples: {
-          adequate: "📌 Capacitación interna de procesos: El área de Talento Humano graba una capacitación, la almacena en su sitio de SharePoint mediante Stream, asigna permisos de visualización a los colaboradores y comparte el enlace oficial a través de Teams.",
-          inadequate: "Subir videos personales o informales, publicar grabaciones sin contexto o sin título, almacenar videos en ubicaciones incorrectas, compartir enlaces sin validar permisos, usar Stream como repositorio temporal sin orden."
+          adequate: "Video-tutorial de 5 minutos sobre cómo usar el nuevo módulo de nómina.",
+          inadequate: "Subir películas o contenido no relacionado con la empresa."
         },
         commonErrors: [
-          "No nombrar correctamente los videos.",
-          "Dejar grabaciones desactualizadas disponibles.",
-          "Compartir videos sin revisar permisos.",
-          "Duplicar videos en distintas ubicaciones.",
-          "No usar capítulos o descripciones."
+          "Videos sin título ni contexto.",
+          "Permisos abiertos a toda la empresa innecesariamente.",
+          "Audio de mala calidad.",
+          "Transcripciones con errores no corregidos.",
+          "No usar capítulos en grabaciones extensas."
         ],
-        impact: "Dificultad para encontrar información clave, consumo innecesario de almacenamiento, riesgos de exposición de información sensible, baja adopción de la plataforma, pérdida de valor del contenido audiovisual corporativo."
-      },
+        impact: "Consumo de almacenamiento ineficiente y dificultad para acceder al conocimiento."
+      }
     ]
   },
   {
@@ -410,130 +416,127 @@ export const categories: Category[] = [
         id: "power-automate",
         name: "Power Automate",
         category: "automation",
-        description: "Optimización de procesos mediante flujos de trabajo automáticos y aprobaciones digitales.",
-        features: ["Flujos automatizados", "Aprobaciones", "Conectores", "RPA"],
-        useCases: ["Aprobaciones digitales", "Notificaciones auto", "Integración datos"],
-        usage: "Diseño y ejecución de flujos de trabajo automatizados para optimizar procesos, reducir tareas manuales, mejorar la eficiencia operativa y asegurar la trazabilidad de las actividades.",
+        description: "Automatización de flujos de trabajo y tareas repetitivas para optimizar procesos.",
+        features: ["Flujos en la nube", "Automatización de UI (RPA)", "Conector con M365", "Aprobaciones automáticas"],
+        useCases: ["Notificaciones", "Sincronización de datos", "Procesos de aprobación"],
+        usage: "Automatización de flujos de trabajo y procesos de negocio.",
+        videos: [
+          "https://www.youtube.com/embed/lNNtxMGLXBQ"
+        ],
         rules: [
-          "Utiliza Power Automate para automatizar procesos recurrentes, aprobaciones y notificaciones.",
-          "Todo flujo debe estar asociado a un proceso definido y documentado.",
-          "La creación de flujos institucionales debe ser aprobada por el líder del proceso y el área de sistemas.",
-          "Cada flujo debe contar con un responsable funcional and un responsable técnico.",
-          "Está prohibido crear flujos que manipulen información sensible sin los controles adecuados.",
-          "Evita duplicar flujos para un mismo proceso.",
-          "Los flujos deben documentarse indicando su objetivo, origen de datos y alcance.",
-          "Se debe establecer monitoreo y validación periódica de los flujos activos.",
-          "Los flujos críticos deben contar con planes de contingencia o reversión.",
-          "No utilices Power Automate como reemplazo de controles o decisiones humanas no autorizadas."
+          "Sólo automatiza procesos aprobados institucionalmente.",
+          "No uses flujos para manipular información sensible sin autorización.",
+          "Garantiza que existan responsables para supervisar los flujos.",
+          "Sigue los estándares de nomenclatura definidos.",
+          "Documenta el propósito y lógica de cada flujo.",
+          "Realiza pruebas en entornos controlados antes de pasar a producción.",
+          "No crees flujos infinitos o con recursión descontrolada."
         ],
         bestPractices: [
-          "Diseña el flujo con lógica clara antes de construirlo.",
-          "Usa nombres descriptivos para flujos y acciones.",
-          "Implementa validaciones y controles de error.",
-          "Limita los permisos y accesos a lo estrictamente necesario.",
-          "Documenta cada flujo al momento de su creación.",
-          "Prueba los flujos en escenarios reales antes de su liberación.",
-          "Monitorea el historial de ejecuciones para detectar fallas.",
-          "Optimiza los flujos para evitar ejecuciones innecesarias."
+          "Usa nombres descriptivos para acciones y flujos.",
+          "Implementa manejo de errores (Try/Catch).",
+          "Evita el uso excesivo de variables globales.",
+          "Divide flujos complejos en flujos más pequeños.",
+          "Usa conexiones seguras y centralizadas.",
+          "Monitorea el historial de ejecución periódicamente.",
+          "Optimiza el uso de conectores para reducir latencia."
         ],
         examples: {
-          adequate: "Un área automatiza un flujo de aprobación de solicitudes internas que se inicia desde Microsoft Forms, envía notificaciones controladas por correo o Teams y almacena los resultados en SharePoint. El flujo fue documentado, aprobado por el líder del proceso y probado antes de su puesta en producción, contando con validaciones de error y responsables definidos.",
-          inadequate: "Crear flujos sin documentación ni aprobación, automatizar procesos críticos sin validaciones, manipular datos sensibles sin controles de seguridad o depender de flujos creados por usuarios sin respaldo del área de sistemas. También es un mal uso no monitorear flujos que están fallando o duplicar automatizaciones existentes."
+          adequate: "Crear un flujo de aprobación para solicitudes de vacaciones que notifica automáticamente al líder y actualiza el estado en una lista de SharePoint.",
+          inadequate: "Automatizar el envío masivo de correos informales o crear flujos que eliminen datos sin confirmación."
         },
         commonErrors: [
-          "Crear flujos sin responsable definido.",
-          "Falta de manejo de errores y excepciones.",
-          "Duplicar flujos para el mismo proceso.",
-          "Automatizar procesos no documentados.",
-          "No revisar el historial de ejecuciones.",
-          "Usar flujos personales para procesos institucionales."
+          "No contemplar casos de error o fallo en el flujo.",
+          "Crear flujos duplicados para una misma tarea.",
+          "Usar credenciales personales en flujos críticos del proceso.",
+          "Ignorar las notificaciones de fallo.",
+          "Diseñar flujos con lógica demasiado compleja en un solo paso."
         ],
-        impact: "El uso incorrecto de Power Automate puede generar fallos operativos, pérdida de información, automatizaciones ineficientes y riesgos de seguridad. Cuando se utiliza correctamente, Power Automate permite estandarizar procesos, reducir errores humanos, mejorar los tiempos de respuesta y fortalecer el control y la trazabilidad de las operaciones."
+        impact: "Riesgos de integridad de datos, procesos detenidos y consumo ineficiente de recursos."
       },
       {
         id: "power-apps",
         name: "Power Apps",
         category: "automation",
-        description: "Creación de aplicaciones de bajo código para digitalizar procesos y captura de datos.",
-        features: ["Apps móviles", "Low-code", "Conexión datos", "Formularios"],
-        useCases: ["Digitalización procesos", "Captura de campo", "Apps gestión"],
-        usage: "Microsoft Power Apps se utiliza para el desarrollo de aplicaciones empresariales de bajo código (low-code) que permiten digitalizar procesos manuales, recolectar datos en campo, automatizar tareas and mejorar la interacción de los usuarios con la información institucional.",
+        description: "Creación de aplicaciones personalizadas para digitalizar procesos y toma de datos.",
+        features: ["Apps de lienzo", "Model-Driven apps", "Conectores de datos", "Uso móvil/escritorio"],
+        useCases: ["Registro de inspecciones", "Gestión de inventarios", "Formularios complejos"],
+        usage: "Desarrollo de aplicaciones empresariales de bajo código.",
+        videos: [
+          "https://www.youtube.com/embed/PMJLsvTz0Zc",
+          "https://www.youtube.com/embed/PMJLsvTz0Zc"
+        ],
         rules: [
-          "La creación de aplicaciones debe estar orientada a resolver necesidades de procesos institucionales definidos y aprobados.",
-          "Toda aplicación institucional debe contar con la autorización del líder del proceso y del área de sistemas.",
-          "Cada aplicación debe tener asignado un responsable funcional y un responsable técnico.",
-          "Utiliza únicamente fuentes de datos oficiales y autorizadas para la alimentación de las aplicaciones.",
-          "No dupliques aplicaciones que ya existan para el mismo fin organizacional.",
-          "Está prohibido gestionar información sensible o confidencial sin los controles de seguridad establecidos.",
-          "Es obligatoria la documentación básica de la aplicación (objetivo, lógica, flujo de datos).",
-          "Los permisos de acceso y edición serán controlados y auditados por el área de sistemas.",
-          "Las aplicaciones deben pasar por una fase de pruebas antes de su publicación oficial.",
-          "No se permite el uso de Power Apps para aplicaciones de carácter personal o ajeno a la gestión corporativa."
+          "Toda aplicación debe tener un dueño de proceso definido.",
+          "Las apps deben usar colores y logos institucionales.",
+          "No almacenes contraseñas o datos críticos sin cifrar.",
+          "Gestiona los permisos de acceso de forma estricta.",
+          "Mantén un backup de las versiones publicadas.",
+          "Asegura que la app sea intuitiva y fácil de usar.",
+          "No utilices conectores no autorizados por TI."
         ],
         bestPractices: [
-          "Diseña la lógica y la interfaz de usuario (UI) antes de iniciar el desarrollo.",
-          "Mantén una nomenclatura clara y consistente en controles, variables y colecciones.",
-          "Asegura la calidad de los datos mediante validaciones en los campos de entrada.",
-          "Aplica principios de simplicidad y facilidad de uso para el usuario final (UX).",
-          "Realiza un control de versiones de la aplicación.",
-          "Documenta los cambios realizados en cada actualización.",
-          "Realiza pruebas exhaustivas con usuarios finales en diferentes dispositivos."
+          "Define el modelo de datos antes de construir la UI.",
+          "Optimiza el rendimiento reduciendo llamadas innecesarias.",
+          "Implementa validaciones en todos los campos de entrada.",
+          "Usa variables de contexto de manera eficiente.",
+          "Asegura la compatibilidad con dispositivos móviles si aplica.",
+          "Realiza pruebas de usabilidad con los usuarios finales.",
+          "Incluye una sección de ayuda o soporte dentro de la app."
         ],
         examples: {
-          adequate: "📌 Aplicación de registro de inspecciones en campo: Se desarrolla una aplicación que permite a los colaboradores registrar hallazgos desde sus dispositivos móviles, conectada a una lista de SharePoint y con un flujo de aprobación en Power Automate. La aplicación cuenta con validaciones de datos, está documentada y fue aprobada por el área de sistemas antes de su uso oficial.",
-          inadequate: "Crear aplicaciones conectadas a fuentes de datos no oficiales, gestionar procesos críticos sin las debidas validaciones, publicar aplicaciones sin control de acceso o sin haber realizado pruebas previas. También es un mal uso duplicar soluciones existentes o no documentar el funcionamiento de la aplicación."
+          adequate: "Una app para que los inspectores de campo registren hallazgos con fotos, que se guardan directamente en SharePoint.",
+          inadequate: "Desarrollar una app sin definir el origen de datos o sin control de acceso por perfiles."
         },
         commonErrors: [
-          "Desarrollar aplicaciones sin un proceso definido.",
-          "Duplicar soluciones existentes.",
-          "Falta de manejo de errores y validaciones de datos.",
-          "Otorgar permisos de acceso excesivos.",
-          "No documentar la lógica de la aplicación."
+          "Lógica pesada en la propiedad OnStart de la aplicación.",
+          "Ignorar la accesibilidad para usuarios con discapacidades.",
+          "No probar la app en diferentes tamaños de pantalla.",
+          "Sobrecargar la app con demasiadas funciones innecesarias.",
+          "Uso ineficiente de la memoria y el almacenamiento local."
         ],
-        impact: "El uso incorrecto de Power Apps puede generar soluciones frágiles, descontrol en el manejo de la información, inconsistencia de datos y riesgos de seguridad. Cuando se utiliza correctamente, Power Apps permite una rápida digitalización de procesos, mejora la calidad de la información recolectada, aumenta la productividad y facilita la toma de decisiones basada en datos reales y confiables."
+        impact: "Experiencia de usuario deficiente, datos incompletos y falta de adopción."
       },
       {
         id: "forms",
         name: "Forms",
         category: "automation",
-        description: "Recolección estructurada de información mediante encuestas y registros digitales.",
-        features: ["Encuestas dinámicas", "Análisis automático", "Ramificación lógica"],
-        useCases: ["Evaluaciones", "Feedback", "Registros"],
-        usage: "Microsoft Forms se utiliza para el diseño and aplicación de formularios, encuestas, sondeos and cuestionarios digitales que permiten recolectar información de manera estructurada, ágil and segura, facilitando el análisis de datos en tiempo real.",
+        description: "Recolección estructurada de datos mediante encuestas, formularios y cuestionarios.",
+        features: ["Encuestas dinámicas", "Resultados en tiempo real", "Integración Excel", "Ramas lógicas"],
+        useCases: ["Evaluación de servicios", "Registro de eventos", "Encuestas de clima"],
+        usage: "Creación de encuestas, cuestionarios y sondeos.",
+        videos: ["https://www.youtube.com/embed/19rSj3d1iFs"],
         rules: [
-          "Utiliza Microsoft Forms para la creación de encuestas de satisfacción, evaluaciones de capacitación, registros de asistencia y formularios de recolección de datos internos.",
-          "Cada formulario debe tener un propósito claro y estar alineado con un proceso o iniciativa institucional.",
-          "La creación de formularios para procesos críticos o masivos debe ser aprobada por el líder del proceso correspondiente.",
-          "Evita la duplicidad de formularios para un mismo fin administrativo.",
-          "Asegura que el tratamiento de la información recolectada cumpla con las políticas de privacidad y protección de datos personales.",
-          "No solicites información sensible o confidencial a través de Forms sin la debida autorización y justificación técnica.",
-          "Es responsabilidad del creador del formulario revisar y almacenar de forma segura los resultados obtenidos.",
-          "Los formularios deben tener una vigencia definida y ser desactivados una vez cumplido su objetivo.",
-          "El responsable de cada formulario debe garantizar que la información sea procesada y comunicada a los interesados cuando aplique."
+          "Asegura la privacidad de los datos de los encuestados.",
+          "No uses formularios para recolectar contraseñas.",
+          "Define un propósito claro antes de lanzar la encuesta.",
+          "Configura las fechas de inicio y cierre del formulario.",
+          "Utiliza lenguaje claro y evite preguntas ambiguas.",
+          "Gestiona los resultados de forma profesional.",
+          "No satures a los colaboradores con encuestas innecesarias."
         ],
         bestPractices: [
-          "Define el objetivo y la audiencia del formulario antes de crearlo.",
-          "Utiliza títulos y descripciones claros para orientar al usuario.",
-          "Solicita únicamente la información necesaria para evitar formularios extensos y fatiga del usuario.",
-          "Configura validaciones en los campos (números, fechas, obligatoriedad) para asegurar la calidad de la data.",
-          "Realiza una prueba del formulario antes de su publicación definitiva.",
-          "Informa a los encuestados sobre el uso que se le dará a la información recolectada.",
-          "Analiza los resultados utilizando las gráficas integradas o exporta a Excel para un análisis detallado.",
-          "Desactiva la recepción de respuestas una vez finalizado el periodo de recolección."
+          "Usa ramas lógicas para personalizar la experiencia del usuario.",
+          "Añade imágenes o temas para mejorar el aspecto visual.",
+          "Prueba el formulario antes de enviarlo masivamente.",
+          "Exporta los datos a Excel para análisis detallados.",
+          "Limita la duración de la encuesta para asegurar mayor tasa de respuesta.",
+          "Usa tipos de preguntas variados (opción múltiple, calificación, etc).",
+          "Incluye un mensaje de agradecimiento al finalizar."
         ],
         examples: {
-          adequate: "📌 Evaluación de una sesión de capacitación: Se crea un formulario con un objetivo claro, se define la fecha de cierre, se validan los campos obligatorios y se cuenta con la aprobación del líder de formación. Los resultados son analizados para identificar oportunidades de mejora en futuros eventos.",
-          inadequate: "Recolectar datos sensibles sin autorización, crear formularios extensos sin un objetivo definido, mantener encuestas abiertas por tiempo indefinido sin responsable de análisis o usar Forms para capturar información que ya existe en otras bases de datos institucionales."
+          adequate: "Crear una encuesta de satisfacción post-capacitación para recolectar feedback de los participantes de forma anónima.",
+          inadequate: "Solicitar datos sensibles o financieros a través de un formulario abierto."
         },
         commonErrors: [
-          "Diseñar formularios extensos o con preguntas irrelevantes.",
-          "Utilizar preguntas ambiguas que confundan al encuestado.",
-          "No establecer una fecha de cierre para la recolección de datos.",
-          "Duplicar encuestas para el mismo grupo de interés.",
-          "No realizar el análisis de la información recolectada."
+          "Encuestas demasiado largas que los usuarios no terminan.",
+          "No validar los campos de respuesta obligatorios.",
+          "Olvidar configurar quién puede responder (interno/externo).",
+          "No analizar los resultados de forma oportuna.",
+          "Hacer preguntas que inducen a una respuesta específica."
         ],
-        impact: "El uso incorrecto de Microsoft Forms puede generar datos incompletos o erróneos, molestia en los usuarios por exceso de encuestas, pérdida de credibilidad institucional y riesgos en el manejo de datos personales. Cuando se utiliza de forma estratégica, Forms agiliza la toma de decisiones, facilita la escucha activa de los colaboradores y optimiza la recolección de insumos para la mejora de procesos."
-      },
+        impact: "Datos sesgados, baja participación y posible fuga de información."
+      }
     ]
   },
   {
@@ -546,41 +549,41 @@ export const categories: Category[] = [
         id: "copilot",
         name: "Copilot",
         category: "ai",
-        description: "Asistente inteligente para potenciar la productividad y generación de contenido.",
-        features: ["Generación texto/código", "Resúmenes", "Análisis datos", "Asistencia real-time"],
-        useCases: ["Redacción borradores", "Análisis tendencias", "Síntesis info"],
-        usage: "Microsoft Copilot se utiliza como un asistente de inteligencia artificial para apoyar la productividad, la generación de borradores de contenido, el resumen de información, el análisis de datos y la optimización de tareas diarias en el ecosistema Microsoft 365.",
+        description: "Asistente inteligente integrado en M365 para potenciar la creatividad y productividad.",
+        features: ["Generación de texto", "Análisis de documentos", "Resumen de reuniones", "Asistencia en código"],
+        useCases: ["Redacción de borradores", "Resumen de hilos de chat", "Creación de presentaciones"],
+        usage: "Asistente de inteligencia artificial para productividad.",
+        videos: ["https://www.youtube.com/embed/AZWk-vnAYYA"],
         rules: [
-          "Copilot debe considerarse una herramienta de apoyo, no una fuente única y definitiva para la toma de decisiones.",
-          "Está estrictamente prohibido ingresar información confidencial, secretos industriales o datos personales sensibles en los prompts de Copilot.",
-          "El usuario es el único responsable de validar, corregir y aprobar el contenido generado por la IA antes de su uso.",
-          "No utilices Copilot para reemplazar procesos de aprobación formal o controles de calidad humanos.",
-          "Toda comunicación o documento oficial generado con apoyo de Copilot debe pasar por una revisión humana obligatoria.",
-          "El uso de Copilot debe estar alineado con las políticas de ética, seguridad y valores corporativos.",
-          "El acceso a Copilot está sujeto a los límites de licenciamiento y perfiles autorizados por el área de sistemas.",
-          "Sistemas gestiona y audita los permisos de uso de la herramienta.",
-          "No se debe presentar información generada por la IA como conocimiento propio sin haber validado su veracidad y pertinencia."
+          "Valida siempre la veracidad de la información generada por IA.",
+          "No ingreses información confidencial o estratégica en prompts externos.",
+          "El uso debe estar enfocado en tareas laborales.",
+          "No uses contenido generado para plagiar o engañar.",
+          "Respeta los derechos de autor y propiedad intelectual.",
+          "Sé transparente sobre el uso de la IA en tus entregables.",
+          "Sigue las guías éticas de uso de IA de la compañía."
         ],
         bestPractices: [
-          "Define un objetivo claro y proporciona contexto suficiente en tus solicitudes (prompts).",
-          "Ajusta y personaliza las respuestas generadas para que se alineen con el tono y la cultura organizacional.",
-          "Verifica siempre las fuentes de datos y las cifras proporcionadas por el asistente.",
-          "Utiliza Copilot para agilizar la redacción de correos, resúmenes de reuniones y esquematización de proyectos.",
-          "Mantén un juicio crítico y ético sobre las recomendaciones sugeridas por la IA.",
-          "Aprende de las sugerencias del asistente para mejorar tus propias habilidades digitales."
+          "Escribe prompts claros, específicos y con contexto.",
+          "Itera los prompts para obtener mejores resultados.",
+          "Usa Copilot para resumir reuniones de Teams y generar actas.",
+          "Pide a la IA que revise y mejore tus borradores.",
+          "Combina la IA con tu criterio humano profesional.",
+          "Capacítate en técnicas de 'Prompt Engineering'.",
+          "Utiliza la IA para aprender nuevas funciones de las herramientas M365."
         ],
         examples: {
-          adequate: "📌 Resumen de un documento extenso: Un colaborador utiliza Copilot para obtener los puntos clave de un informe de 50 páginas. Posteriormente, el colaborador lee el resumen, valida la información técnica con el documento original y redacta un correo institucional con sus propias conclusiones, citando los datos verificados.",
-          inadequate: "Generar un informe financiero crítico y enviarlo sin revisión humana, ingresar datos estratégicos del negocio en el chat de IA, o confiar ciegamente en una respuesta académica sin validar su exactitud. También es un mal uso delegar decisiones de liderazgo o talento humano exclusivamente a las recomendaciones de la herramienta."
+          adequate: "Pedirle a Copilot que genere un resumen ejecutivo basado en una transcripción de una reunión de proyecto.",
+          inadequate: "Confiar ciegamente en un dato estadístico generado sin verificarlo en la fuente oficial."
         },
         commonErrors: [
-          "Confianza ciega en la información generada por la IA.",
-          "Ingresar información confidencial en los prompts.",
-          "Omitir la revisión y validación humana obligatoria.",
-          "Reemplazar aprobaciones formales por sugerencias de Copilot.",
-          "Uso para fines no laborales o contenidos inapropiados."
+          "Ignorar sesgos o errores en las respuestas de la IA.",
+          "Sustituir totalmente el pensamiento crítico por la IA.",
+          "Usar prompts demasiado vagos que generan respuestas genéricas.",
+          "No revisar la gramática y el tono del texto generado.",
+          "Ingresar datos privados de clientes sin anonimizar."
         ],
-        impact: "El uso inadecuado de Copilot puede generar errores en la información oficial, riesgos de seguridad por fuga de datos, sesgos en la toma de decisiones y posibles incumplimientos éticos o legales. Cuando se utiliza de forma responsable, Copilot potencia la creatividad, mejora la eficiencia operativa y permite a los colaboradores enfocarse en tareas de alto valor estratégico."
+        impact: "Información falsa, riesgos éticos y pérdida de calidad profesional."
       }
     ]
   },
@@ -594,118 +597,110 @@ export const categories: Category[] = [
         id: "todo",
         name: "To Do",
         category: "productivity",
-        description: "Gestión personal de tareas y pendientes individuales sincronizados.",
-        features: ["Listas Mi Día", "Recordatorios", "Integración Outlook", "Pasos"],
-        useCases: ["Pendientes diarios", "Recordatorios personales", "Tareas Outlook"],
-        usage: "Microsoft To Do se utiliza como la herramienta oficial para la gestión personal y ligera de tareas individuales, permitiendo a los colaboradores organizar sus pendientes diarios, establecer recordatorios y sincronizar compromisos integrados con Outlook y Planner.",
+        description: "Gestión personal de tareas y listas para organizar el trabajo diario.",
+        features: ["Listas personales", "Recordatorios", "Mi día", "Sincronización M365"],
+        useCases: ["Lista diaria", "Seguimiento personal", "Gestión de tareas de Outlook"],
+        usage: "Planificador de tareas diarias integrado con Outlook.",
         rules: [
-          "Utilza Microsoft To Do como la herramienta principal para la gestión de tus tareas individuales de trabajo.",
-          "To Do es para uso personal; para seguimiento de tareas grupales o proyectos de área, utiliza Microsoft Planner.",
-          "Las tareas registradas deben estar asociadas a compromisos laborales reales.",
-          "Se recomienda sincronizar las tareas con los correos marcados de Outlook para una gestión centralizada.",
-          "El contenido de las tareas debe ser claro y profesional.",
-          "No registres información sensible o estratégica del negocio sin seguir los lineamientos de seguridad establecidos por el área de sistemas."
+          "Enfocado en la gestión personal de actividades.",
+          "Mantén actualizadas tus fechas de vencimiento.",
+          "Clasifica tus tareas por importancia.",
+          "No es una herramienta para seguimiento de proyectos grupales.",
+          "Sincroniza con Outlook para mayor control."
         ],
         bestPractices: [
-          "Crea listas temáticas para organizar diferentes tipos de pendientes.",
-          "Utiliza fechas de vencimiento y recordatorios para priorizar tus actividades.",
-          "Desglosa tareas complejas en pasos más pequeños para facilitar su ejecución.",
-          "Revisa cada mañana la sección 'Mi día' para planificar tu jornada laboral.",
-          "Utiliza etiquetas para agrupar tareas similares.",
-          "Elimina o archiva listas de tareas que ya hayan sido completadas.",
-          "Limpia periódicamente tus pendientes para mantener la lista actualizada y manejable."
+          "Usa la sección 'Mi Día' para priorizar.",
+          "Divide tareas grandes en pasos pequeños.",
+          "Activa notificaciones importantes.",
+          "Revisa tus listas al iniciar y finalizar la jornada.",
+          "Usa categorías o etiquetas para organizar."
         ],
         examples: {
-          adequate: "📌 Organización de la jornada diaria: Un colaborador marca un correo importante en Outlook, el cual aparece automáticamente en su lista de tareas de To Do. Luego, agrega pasos específicos para completar la solicitud, asigna una fecha de vencimiento y añade la tarea a 'Mi día' para asegurar su cumplimiento durante la jornada.",
-          inadequate: "Intentar controlar las tareas de todo un equipo de trabajo a través de To Do, duplicar planes de seguimiento que ya existen en Planner, o registrar tareas personales ajenas a la labor profesional sin distinción. También es un mal uso saturar las listas con pendientes irrelevantes o sin fecha de compromiso."
+          adequate: "Listar las 5 tareas críticas que debo completar hoy para el cierre contable.",
+          inadequate: "Intentar gestionar todo el plan de un proyecto con 10 personas en To Do."
         },
         commonErrors: [
-          "Registrar tareas vagas o sin fecha de vencimiento.",
-          "Saturar la lista de tareas sin establecer prioridades.",
-          "Duplicar información entre To Do y Planner innecesariamente.",
-          "No marcar como completadas las tareas finalizadas.",
-          "No revisar la sección 'Mi día' regularmente."
+          "Saturar la lista sin prioridades.",
+          "No revisar las tareas vencidas.",
+          "Mezclar tareas personales no laborales.",
+          "Información desactualizada.",
+          "No usar recordatorios."
         ],
-        impact: "El uso inadecuado de Microsoft To Do puede generar desorganización personal, pérdida de control sobre los compromisos laborales, baja productividad y estrés por acumulación de pendientes. Utilizado correctamente, To Do mejora el enfoque individual, facilita el cumplimiento de objetivos diarios y optimiza la gestión del tiempo personal."
+        impact: "Desorganización, olvido de compromisos y estrés."
       },
       {
         id: "planner",
         name: "Planner",
         category: "productivity",
-        description: "Gestión visual de tareas colaborativas y seguimiento de compromisos de equipo.",
-        features: ["Tableros Kanban", "Buckets", "Asignación visual", "Gráficos progreso"],
-        useCases: ["Proyectos áreas", "Seguimiento planes", "Tareas equipo"],
-        usage: "Microsoft Planner se utiliza para la planeación, asignación and seguimiento del trabajo colaborativo mediante tableros visuales, permitiendo a los equipos organizar proyectos, gestionar tareas compartidas and monitorear el progreso de los objetivos grupales de manera integrada con Teams.",
+        description: "Gestión visual de tareas de equipo mediante buckets y tableros Kanban.",
+        features: ["Tablero Kanban", "Asignación de tareas", "Gráficos de progreso", "Integración con Teams"],
+        useCases: ["Proyectos de equipo", "Gestión de campañas", "Seguimiento de entregables"],
+        usage: "Gestión visual de tareas en equipo.",
         rules: [
-          "Utiliza Microsoft Planner para la gestión de tareas de equipo, seguimiento de proyectos de área o planes de acción colaborativos.",
-          "Cada plan de tareas debe estar asociado a un equipo de trabajo o canal específico en Microsoft Teams.",
-          "Toda tarea creada debe contar con un responsable asignado, una fecha de vencimiento y una descripción clara del entregable.",
-          "El líder del área o proyecto es el responsable de administrar el tablero y asegurar que los buckets (categorías) sean coherentes con el proceso.",
-          "Evita la duplicidad de tareas para un mismo entregable.",
-          "Planner se establece como la herramienta oficial para el seguimiento de compromisos en reuniones de equipo.",
-          "Los archivos relacionados con las tareas deben estar linkeados desde SharePoint para asegurar el control documental.",
-          "Actualizar el estado de las tareas (No iniciada, En curso, Completada) oportunamente para reflejar el progreso real del equipo.",
-          "No utilices Planner para conversaciones informales o temas que deben tratarse por chat o correo electrónico."
+          "Cada tarea debe tener un responsable y vencimiento.",
+          "Uso para proyectos y actividades colaborativas.",
+          "Mantén actualizados los estados de progreso.",
+          "Nombra los buckets de forma lógica.",
+          "No es para tareas de alta complejidad (usar Project)."
         ],
         bestPractices: [
-          "Define un objetivo claro para el plan antes de iniciar la creación de tareas.",
-          "Divide los proyectos en tareas pequeñas y manejables.",
-          "Utiliza las etiquetas de colores para identificar prioridades, tipos de tareas o riesgos.",
-          "Usa la sección de comentarios en cada tarea para dejar evidencia de avances o aclaraciones técnicas.",
-          "Realiza una revisión periódica del tablero en las reuniones de seguimiento de equipo.",
-          "Utiliza los gráficos de progreso de Planner para identificar cuellos de botella.",
-          "Planifica las tareas por buckets lógicos (Ej: Por fase de proyecto, por tipo de actividad)."
+          "Integra tableros en canales de Teams.",
+          "Usa etiquetas de colores para prioridades.",
+          "Revisa los gráficos de carga de trabajo.",
+          "Adjunta archivos de referencia en las tareas.",
+          "Comenta avances en los hilos de la tarea."
         ],
         examples: {
-          adequate: "📌 Seguimiento de un proyecto de área: El líder de un equipo crea un plan en Planner con buckets divididos por fases de implementación. Cada tarea tiene un responsable, una fecha clara y el equipo comenta los avances diariamente, actualizando el estado de las mismas conforme se completan. Los documentos de soporte están vinculados desde el sitio de SharePoint del equipo.",
-          inadequate: "Mantener planes sin responsables asignados, crear tareas sin fecha de compromiso, o usar el tablero como un simple listado de ideas sin gestión real. También es un mal uso adjuntar archivos locales a las tareas en lugar de usar enlaces a SharePoint, o no actualizar el progreso del plan durante semanas."
+          adequate: "Tablero para el proyecto de auditoría interna con responsables por etapa.",
+          inadequate: "Usar un solo bucket para 50 tareas sin categorías."
         },
         commonErrors: [
-          "Crear tareas sin asignar responsable ni fecha.",
-          "No actualizar el progreso de las tareas asignadas.",
-          "Usar Planner como un listado pasivo sin gestión activa.",
-          "Adjuntar archivos desde la computadora local directamente.",
-          "No definir un objetivo claro para cada plan creado."
+          "Tareas sin responsable asignado.",
+          "Vencimientos imposibles o inexistentes.",
+          "Falta de seguimiento a tareas en 'Progreso'.",
+          "Duplicación de tableros.",
+          "No usar las notificaciones de retraso."
         ],
-        impact: "El uso incorrecto de Microsoft Planner puede generar falta de visibilidad sobre los avances, incumplimiento de compromisos, desorganización en el equipo y reprocesos por falta de claridad en las responsabilidades. Cuando se utiliza correctamente, Planner mejora la transparencia administrativa, fortalece el trabajo en equipo, optimiza el cumplimiento de plazos y facilita el monitoreo ágil de los resultados organizacionales."
+        impact: "Retrasos en proyectos y falta de visibilidad en el equipo."
       },
       {
         id: "ofimatica",
-        name: "Ofimática",
+        name: "Ofimática (Word, Excel, PPT)",
         category: "productivity",
-        description: "Herramientas estándar para creación y análisis de documentos (Word, Excel, PowerPoint).",
-        features: ["Documentación", "Análisis datos", "Presentaciones", "Coautoría"],
-        useCases: ["Informes", "Cálculos", "Capacitaciones"],
-        usage: "Las herramientas de ofimática (Word, Excel y PowerPoint) se utilizan para la creación, edición, análisis y presentación de información corporativa, facilitando la documentación de procesos, el cálculo de indicadores y la comunicación de resultados estratégicos.",
+        description: "Herramientas estándar para creación de documentos, hojas de cálculo y presentaciones.",
+        features: ["Edición en tiempo real", "Autoguardado", "Copilot integrado", "Comentarios/Revisiones"],
+        useCases: ["Informes técnicos", "Análisis financiero", "Presentaciones ejecutivas"],
+        usage: "Creación y edición de documentos profesionales.",
+        videos: [
+          "https://www.youtube.com/embed/Bt0qR-UboIA",
+          "https://www.youtube.com/embed/AklcB-yKeUw"
+        ],
         rules: [
-          "Todos los documentos oficiales generados deben almacenarse en SharePoint o OneDrive según corresponda.",
-          "Es obligatorio el uso de las plantillas corporativas vigentes para la creación de informes, presentaciones y formatos institucionales.",
-          "La información plasmada en los documentos de ofimática debe ser veraz, actualizada y profesional.",
-          "El control de versiones debe realizarse a través de las funciones nativas de Microsoft 365, evitando renombrar archivos como “v2”, ”final”, etc.",
-          "Está prohibido compartir documentos que contengan información sensible o estratégica sin los permisos de acceso definidos.",
-          "Respeta la estructura, tipografía y formatos estandarizados por la organización en cada herramienta."
+          "Usa las plantillas corporativas oficiales.",
+          "Activa siempre el autoguardado en OneDrive/SharePoint.",
+          "Nombra los archivos según la política de nomenclatura.",
+          "Usa comentarios para revisión, no modifiques texto ajeno sin avisar.",
+          "Mantén la accesibilidad de los documentos."
         ],
         bestPractices: [
-          "Identifica tus archivos con nombres claros, cortos y estandarizados.",
-          "Aprovecha las funciones de coautoría para trabajar en tiempo real con tu equipo y evitar la creación de múltiples copias.",
-          "Utiliza el control de cambios y comentarios para revisiones colaborativas.",
-          "Asegura la calidad visual y ortográfica de tus documentos antes de su distribución final.",
-          "Usa Excel para el análisis estructurado de datos y evita su uso como base de datos masiva o CRM.",
-          "Crea presentaciones de PowerPoint dinámicas, evitando el exceso de texto y priorizando la claridad visual.",
-          "Utiliza la protección de archivos con contraseña o cifrado cuando la información lo requiera."
+          "Co-edita documentos en tiempo real con el equipo.",
+          "Usa estilos de párrafo en Word para navegación.",
+          "Optimiza libros de Excel (tablas, no solo rangos).",
+          "Usa el diseñador de PPT para presentaciones profesionales.",
+          "Usa Copilot para redactar, analizar datos o diseñar."
         ],
         examples: {
-          adequate: "📌 Elaboración de un informe de gestión: Un colaborador utiliza la plantilla institucional en Word, realiza el análisis de datos en Excel utilizando tablas dinámicas y sintetiza los resultados en una presentación de PowerPoint. Todos los archivos se almacenan en el sitio de SharePoint del área y se comparten mediante enlaces controlados para su revisión bajo el esquema de coautoría.",
-          inadequate: "Mantener múltiples versiones de un mismo archivo en carpetas locales con nombres confusos como “informe_final_v2_este_si”, saturar presentaciones con exceso de texto y transiciones distractoras, o utilizar tipografías y colores no institucionales en documentos corporativos oficiales. También es un mal uso compartir archivos pesados por correo electrónico en lugar de usar enlaces de SharePoint."
+          adequate: "Presentación de resultados trimestrales creada en PPT con el equipo, usando diseño institucional.",
+          inadequate: "Enviar versiones (V1, V2, Final_Final_OK) por correo en lugar de co-editar un solo link."
         },
         commonErrors: [
-          "Mantener múltiples versiones manuales de un archivo.",
-          "No utilizar las plantillas institucionales obligatorias.",
-          "Omitir la validación de fórmulas y datos en hojas de cálculo.",
-          "Saturar documentos y presentaciones con información irrelevante.",
-          "Compartir archivos sin configurar correctamente los permisos de acceso."
+          "Trabajar en local sin sincronizar.",
+          "Perder el control de cambios.",
+          "Ignorar alertas de seguridad en macros.",
+          "Sobrecargar archivos con imágenes sin comprimir.",
+          "No usar tablas dinámicas en Excel."
         ],
-        impact: "El uso incorrecto de las herramientas de ofimática puede generar desorganización documental, riesgos de error en la información crítica, pérdida de la imagen institucional y dificultades para la colaboración eficiente. Utilizadas bajo los estándares definidos, estas herramientas fortalecen la profesionalización de la gestión, aseguran la calidad de la información y facilitan la toma de decisiones basada en reportes claros y confiables."
+        impact: "Duplicidad de trabajo, pérdida de versiones y falta de profesionalismo visual."
       }
     ]
   },
@@ -719,135 +714,119 @@ export const categories: Category[] = [
         id: "power-bi",
         name: "Power BI",
         category: "analytics",
-        description: "Visualización interactiva de indicadores para la toma de decisiones basada en datos.",
-        features: ["Tableros control", "Medidas DAX", "Actualización auto", "RLS"],
-        useCases: ["KPIs negocio", "Reportes gerenciales", "Monitoreo real-time"],
-        usage: "Microsoft Power BI se utiliza para el análisis, visualización and monitoreo de información empresarial mediante tableros interactivos (dashboards), facilitando la toma de decisiones basada en indicadores clave de desempeño (KPIs) and datos reales obtenidos de diversas fuentes tecnológicas.",
+        description: "Análisis de datos y visualización para la toma de decisiones basada en información real.",
+        features: ["Dashboards interactivos", "Modelado de datos", "Informes automáticos", "IA integrada"],
+        useCases: ["Reportes de gestión", "Kpis de área", "Análisis de tendencias"],
+        usage: "Visualización de datos y generación de tableros de control.",
+        videos: ["https://www.youtube.com/embed/Gm6G2rXOKGA"],
         rules: [
-          "Utiliza Power BI como la herramienta oficial para el análisis y visualización de datos de la organización.",
-          "Todo reporte o tablero desarrollado debe basarse en fuentes de información oficiales y validadas por el área de sistemas.",
-          "La creación y publicación de tableros institucionales requiere la autorización del líder del proceso y el visto bueno técnico de sistemas.",
-          "Cada tablero debe tener un responsable funcional (dueño del dato) and un responsable técnico del modelo.",
-          "Define niveles de seguridad y acceso acordes a la sensibilidad de la información plasmada en el reporte.",
-          "Evita la duplicidad de indicadores; antes de desarrollar un nuevo reporte, verifica si la información ya existe en tableros consolidados.",
-          "Los modelos de datos deben construirse bajo buenas prácticas de rendimiento y escalabilidad (Modelado en estrella, medidas DAX claras).",
-          "La publicación de reportes debe realizarse en las áreas de trabajo (workspaces) oficiales y no en perfiles personales.",
-          "Se debe definir la periodicidad de actualización de los datos y asegurar su correcto funcionamiento.",
-          "Cualquier modificación en las consultas o medidas principales debe ser documentada y comunicada a los interesados."
+          "Los datos mostrados deben provenir de fuentes oficiales.",
+          "No compartas reportes fuera de la organización sin permiso.",
+          "Garantiza que los cálculos y fórmulas (DAX) sean correctos.",
+          "Mantén el diseño visual alineado a la identidad corporativa.",
+          "Configura la actualización automática de datos.",
+          "No expongas información sensible a perfiles no autorizados.",
+          "Valida la calidad de los datos antes de publicar el informe."
         ],
         bestPractices: [
-          "Define el objetivo del tablero y las preguntas de negocio que debe responder antes de iniciar el desarrollo.",
-          "Usa modelos de datos estructurados para optimizar el rendimiento de las visualizaciones.",
-          "Utiliza visualizaciones simples, claras y orientadas a la experiencia del usuario final.",
-          "Implementa seguridad a nivel de fila (RLS) cuando el reporte contenga información que deba ser filtrada por perfiles.",
-          "Valida los resultados del tablero con los responsables del dato antes de su distribución final.",
-          "Documenta las métricas principales y las fuentes de origen en una sección de glosario dentro del reporte.",
-          "Mantén el diseño alineado con la identidad visual corporativa."
+          "Usa un modelo de datos en estrella (Star Schema).",
+          "Optimiza el tamaño del set de datos eliminando columnas innecesarias.",
+          "Implementa filtros y segmentadores de forma intuitiva.",
+          "Usa títulos claros y leyendas explicativas en cada gráfico.",
+          "Diseña pensando en la jerarquía de la información (de lo general a lo específico).",
+          "Prueba la velocidad de carga de los reportes.",
+          "Documenta el origen y transformación de los datos."
         ],
         examples: {
-          adequate: "📌 Tablero de indicadores financieros: Se desarrolla un reporte conectado automáticamente al sistema transaccional, con métricas de ingresos y gastos validadas por el área financiera. El tablero se publica en el workspace corporativo, cuenta con permisos de acceso segmentados y se actualiza diariamente al inicio de la jornada.",
-          inadequate: "Crear reportes con extracciones de datos manuales sin validación, duplicar tableros con métricas que muestran resultados contradictorios para el mismo indicador, o publicar información sensible en espacios públicos sin control de acceso. También es un mal uso saturar los reportes con visualizaciones innecesarias que dificultan la interpretación de los datos críticos."
+          adequate: "Un tablero gerencial que muestra las ventas mensuales comparadas contra el presupuesto inicial, con posibilidad de filtrar por zona.",
+          inadequate: "Gráficos confusos con demasiados colores o datos que no coinciden con la fuente original."
         },
         commonErrors: [
-          "Construir reportes sobre fuentes de datos no confiables o manuales.",
-          "Falta de validación de los resultados con los dueños del proceso.",
-          "Publicar tableros en espacios de trabajo personales.",
-          "No implementar controles de acceso y seguridad de la información.",
-          "Desarrollar modelos de datos excesivamente complejos o ineficientes."
+          "Modelos de datos con relaciones muchos a muchos no gestionadas.",
+          "Cálculos DAX demasiado complejos que afectan el rendimiento.",
+          "Subir datos sin limpiar o transformar previamente.",
+          "Ignorar el diseño para dispositivos móviles.",
+          "No actualizar las fuentes de datos periódicamente."
         ],
-        impact: "El uso incorrecto de Power BI puede generar toma de decisiones basadas en datos erróneos, duplicidad de esfuerzos, riesgos de seguridad de la información corporativa y confusión entre las áreas por falta de estandarización de indicadores. Cuando se utiliza correctamente, Power BI democratiza el acceso a la información, mejora la transparencia operativa y permite una gestión estratégica basada en evidencias y resultados medibles."
+        impact: "Toma de decisiones con datos erróneos, confusión y falta de transparencia."
       }
     ]
   },
   {
     id: "security",
     name: "Identidad, seguridad y administración de dispositivos",
-    colorClass: "text-gray-800",
-    bgClass: "bg-category-security border border-gray-300",
+    colorClass: "text-white",
+    bgClass: "bg-category-security",
     apps: [
       {
         id: "azure-ad",
-        name: "Azure AD (Entra ID)",
+        name: "Microsoft Entra ID (Azure AD)",
         category: "security",
-        description: "Control de identidades y accesos seguros a los recursos digitales.",
-        features: ["MFA", "SSO", "Acceso condicional", "Gestión roles"],
-        useCases: ["Autenticación", "Control accesos", "Gestión usuarios"],
-        usage: "Microsoft Azure AD (Entra ID) se utiliza para la gestión centralizada de identidades, autenticación and control de accesos a los sistemas, aplicaciones and recursos digitales de la organización, garantizando la seguridad and el acceso adecuado de los usuarios.",
+        description: "Gestión de identidades y accesos para proteger los recursos institucionales.",
+        features: ["Identidad centralizada", "MFA (Multifactor)", "Acceso condicional", "Single Sign-On (SSO)"],
+        useCases: ["Control de acceso", "Autenticación segura", "Gestión de perfiles"],
+        usage: "Gestión de identidades y control de acceso seguro.",
         rules: [
-          "Azure AD es la fuente única y oficial de gestión de identidades de la organización.",
-          "Todas las cuentas de usuario deben estar asociadas a una persona identificada.",
-          "La creación, modificación y eliminación de cuentas es responsabilidad del área de sistemas.",
-          "Los accesos deben asignarse según el principio de mínimo privilegio.",
-          "Está prohibido compartir credenciales entre usuarios.",
-          "Toda baja de personal debe reflejarse oportunamente en Azure AD.",
-          "Se deben aplicar políticas de seguridad definidas (MFA, contraseñas, acceso condicional).",
-          "El acceso a aplicaciones y servicios debe estar justificado por función o rol.",
-          "Las cuentas con privilegios elevados deben estar debidamente controladas y auditadas.",
-          "No se deben crear cuentas genéricas sin aprobación formal."
+          "El uso de MFA (Doble factor) es obligatorio.",
+          "No compartas tus credenciales de acceso bajo ningún motivo.",
+          "Usa contraseñas seguras y actualízalas cuando se te solicite.",
+          "Cierra sesión en equipos que no sean tuyos.",
+          "Reporta intentos de acceso no autorizados inmediatamente."
         ],
         bestPractices: [
-          "Habilita la autenticación multifactor (MFA) en todas las cuentas.",
-          "Revisa periódicamente los accesos asignados a usuarios y aplicaciones.",
-          "Usa grupos de seguridad para asignar permisos.",
-          "Aplica políticas de acceso condicional según el contexto de riesgo.",
-          "Documenta roles y permisos críticos.",
-          "Monitorea inicios de sesión y alertas de seguridad.",
-          "Deshabilita cuentas inactivas o no autorizadas de forma oportuna."
+          "Usa Microsoft Authenticator como método principal de MFA.",
+          "Revisa tus actividades de inicio de sesión sospechosas.",
+          "Vincula tu cuenta a un solo perfil profesional.",
+          "Usa el autoservicio para restablecer contraseñas si olvidas la tuya.",
+          "Nunca aceptes una solicitud de MFA que no hayas iniciado tú."
         ],
         examples: {
-          adequate: "📌 Gestión de accesos: El área de sistemas gestiona el alta de un nuevo colaborador creando su cuenta en Azure AD, asignándole accesos según su rol y habilitando MFA. Cuando el colaborador cambia de área o se retira de la empresa, los permisos se ajustan o la cuenta se deshabilita de forma inmediata, manteniendo la seguridad y la trazabilidad.",
-          inadequate: "Compartir credenciales entre usuarios, mantener cuentas activas de empleados retirados, asignar privilegios excesivos sin justificación o crear cuentas genéricas para múltiples personas. También es un mal uso desactivar controles de seguridad por comodidad."
+          adequate: "Un colaborador intenta acceder a su correo desde una red desconocida y el sistema le solicita validar su identidad mediante MFA en su celular.",
+          inadequate: "Anotar la contraseña en un post-it pegado al monitor o compartirla con un compañero 'para que me ayude'."
         },
         commonErrors: [
-          "Crear cuentas genéricas o sin responsable.",
-          "No retirar accesos a tiempo cuando un usuario cambia de rol o sale de la empresa.",
-          "Asignar permisos directamente a usuarios en lugar de grupos.",
-          "Deshabilitar MFA o políticas de seguridad.",
-          "No monitorear accesos sospechosos."
+          "Aceptar notificaciones de MFA por error o descuido.",
+          "Usar la misma contraseña para cuentas personales y laborales.",
+          "No configurar métodos alternativos de recuperación.",
+          "Ignorar las alertas de seguridad de inicio de sesión.",
+          "No bloquear la sesión al retirarse del puesto de trabajo."
         ],
-        impact: "El uso incorrecto de Azure AD puede generar accesos no autorizados, fugas de información, incumplimientos normativos y altos riesgos de ciberseguridad. Utilizado correctamente, Azure AD fortalece el control de identidades, mejora la seguridad de los accesos y garantiza la continuidad operativa de la organización."
+        impact: "Suplantación de identidad, acceso no autorizado a datos críticos y compromiso total de la red corporativa."
       },
       {
         id: "intune",
         name: "Intune",
         category: "security",
-        description: "Administración de dispositivos y cumplimiento de políticas de seguridad corporativas.",
-        features: ["MDM/MAM", "Borrado remoto", "Cumplimiento", "Seguridad endpoints"],
-        useCases: ["Gobernanza dispositivos", "Protección datos móviles", "BYOD"],
-        usage: "Microsoft Intune se utiliza para la gestión centralizada de dispositivos corporativos and personales (BYOD), aplicación de políticas de seguridad, control de cumplimiento and protección de la información, garantizando el acceso seguro a los recursos de la organización.",
+        description: "Gestión de dispositivos y aplicaciones para asegurar el acceso a la información corporativa.",
+        features: ["Gestión de dispositivos (MDM)", "Gestión de apps (MAM)", "Protección de datos", "Cumplimiento"],
+        useCases: ["Configuración remota", "Protección de datos móviles", "Inventario de equipos"],
+        usage: "Administración de dispositivos y aplicaciones corporativas.",
         rules: [
-          "Microsoft Intune es la herramienta oficial para la administración de dispositivos corporativos y autorizados.",
-          "Todo dispositivo que acceda a recursos corporativos debe estar inscrito y gestionado en Intune.",
-          "El área de sistemas es responsable de la inscripción, configuración y administración de dispositivos.",
-          "Se deben aplicar políticas de seguridad obligatorias en todos los dispositivos gestionados.",
-          "Está prohibido acceder a información corporativa desde dispositivos no gestionados.",
-          "Se deben definir políticas diferenciadas para dispositivos corporativos y BYOD.",
-          "Los dispositivos deben cumplir los requisitos de seguridad para mantener el acceso.",
-          "El borrado remoto será aplicado en caso de pérdida, robo o baja del colaborador.",
-          "No se permite la manipulación o desactivación de políticas de Intune por parte del usuario.",
-          "El incumplimiento de las políticas puede generar restricción o bloqueo de acceso."
+          "Todos los dispositivos corporativos deben estar enrolados.",
+          "No intentes evadir las políticas de seguridad.",
+          "Reporta el robo o pérdida de un dispositivo enrolado de inmediato.",
+          "Mantén el sistema operativo y apps actualizados.",
+          "No instales software no autorizado en equipos corporativos."
         ],
         bestPractices: [
-          "Mantén los dispositivos actualizados con los últimos parches de seguridad.",
-          "Usa políticas de cumplimiento claras y comunicadas a los usuarios.",
-          "Aplica perfiles de configuración estandarizados.",
-          "Separa claramente datos personales y corporativos en dispositivos BYOD.",
-          "Monitorea continuamente el estado de cumplimiento de los dispositivos.",
-          "Documenta las políticas aplicadas.",
-          "Revisa periódicamente dispositivos inactivos o no conformes."
+          "Usa el portal de empresa para instalar apps oficiales.",
+          "Protege tu dispositivo con métodos de desbloqueo seguros.",
+          "Separa el contenido personal del laboral en móviles.",
+          "Revisa las notificaciones de cumplimiento de tu dispositivo.",
+          "Consulta con TI antes de solicitar cambios en las políticas."
         ],
         examples: {
-          adequate: "📌 Dispositivo gestionado: Un colaborador recibe un equipo corporativo que es inscrito en Intune por el área de sistemas, con políticas de seguridad, cifrado y acceso condicional. El dispositivo cumple permanentemente las políticas y permite al usuario acceder de forma segura a los recursos corporativos. En caso de pérdida, el área de sistemas ejecuta un borrado remoto para proteger la información.",
-          inadequate: "Acceder a correo o documentos corporativos desde un dispositivo personal no inscrito, desactivar políticas de seguridad, compartir equipos corporativos o negarse a aplicar actualizaciones obligatorias. También es un mal uso manipular el dispositivo para evadir controles de seguridad."
+          adequate: "Un colaborador recibe su nuevo equipo y lo enrola en Intune para recibir automáticamente sus apps y configuraciones de seguridad.",
+          inadequate: "Utilizar el equipo corporativo para descargar software pirata o desactivar el antivirus."
         },
         commonErrors: [
-          "Acceder a información corporativa desde dispositivos no gestionados.",
-          "Desactivar o evadir políticas de seguridad.",
-          "Compartir dispositivos corporativos.",
-          "No reportar pérdida o robo de dispositivos.",
-          "Mantener dispositivos sin actualizar."
+          "No realizar el enrolamiento inicial.",
+          "Ignorar las solicitudes de reinicio para actualizaciones de seguridad.",
+          "Perder el acceso por errores en el PIN/Contraseña.",
+          "No reportar anomalías en el funcionamiento del MDM.",
+          "Exponer datos corporativos en apps no gestionadas."
         ],
-        impact: "El uso incorrecto de Intune puede generar pérdida de información, accesos no autorizados, incumplimientos de seguridad y riesgos legales. Utilizado correctamente, Intune fortalece la seguridad de los dispositivos, protege los datos corporativos y permite una gestión eficiente y centralizada del entorno tecnológico."
+        impact: "Vulnerabilidades de seguridad, pérdida de datos y sanciones disciplinarias."
       }
     ]
   }
@@ -855,12 +834,12 @@ export const categories: Category[] = [
 
 export const getAppById = (id: string): M365App | undefined => {
   for (const category of categories) {
-    const app = category.apps.find(app => app.id === id);
+    const app = category.apps.find(a => a.id === id);
     if (app) return app;
   }
   return undefined;
 };
 
 export const getCategoryById = (id: string): Category | undefined => {
-  return categories.find(cat => cat.id === id);
+  return categories.find(c => c.id === id);
 };
