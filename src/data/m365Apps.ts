@@ -143,7 +143,7 @@ export const categories: Category[] = [
           "Usa hashtags (#) para organizar temas y facilitar búsquedas.",
           "Revisa la ortografía y claridad del mensaje antes de publicarlo.",
           "Participa en encuestas y actividades propuestas por la empresa.",
-          "Denuncia publicaciones que atenten contra la ética, el respeto o los valores de la organización (Presenta tus denuncias al correo ética.empresarial@grupohnc.com)"
+          "Denuncia publicaciones que atenten contra la ética, el respeto o los valores de la organización (Presenta tus denuncias al correo ética.empresarial@indufaros.com)"
         ],
         examples: {
           adequate: "Un área publica en su espacio un reconocimiento al equipo por el cumplimiento de un objetivo, acompañando el mensaje con un tono positivo, una imagen institucional y hashtags que facilitan la visibilidad del contenido. La gerencia comparte un comunicado organizacional relevante para todos los colaboradores, fomentando la participación mediante comentarios respetuosos. Los colaboradores interactúan de forma constructiva, participan en encuestas corporativas y celebran fechas especiales, fortaleciendo el sentido de pertenencia y la cultura organizacional.",

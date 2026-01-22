@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
             ECOSISTEMA <span className="text-primary">MICROSOFT 365</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8 font-medium">
-            Un sistema de procesos formado por las personas que trabajan en HNC que interactúan entre sí y con su entorno para crear un equilibrio dinámico - automatización de procesos útiles para evitar pérdida de tiempo improductivo.
+            Un sistema de procesos formado por las personas que trabajan en INDUFAROS que interactúan entre sí y con su entorno para crear un equilibrio dinámico - automatización de procesos útiles para evitar pérdida de tiempo improductivo.
           </p>
         </div>
 
